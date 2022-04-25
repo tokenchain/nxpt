@@ -14,7 +14,10 @@ CONTRACT_LIST = [
     "vault/ProposedOwnable.sol",
     "vault/Router.sol",
     "vault/RouterFactory.sol",
-    "vault/TransactionManager.sol"
+    "vault/TransactionManager.sol",
+    "vault/test/Counter.sol",
+    "vault/test/TestERC20.sol",
+    "vault/test/FeeERC20.sol",
 ]
 
 r = MiliDoS(NETWORK)

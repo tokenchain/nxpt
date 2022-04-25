@@ -8,7 +8,7 @@ COMPRESSED_NAME="solc-build.tar.gz"
 # Please setup your local path for local transpiling
 # LOCAL MACHINE ONLY the default path
 
-BUILDPATH=$HOME/Documents/b95/nxtpc
+BUILDPATH=$HOME/Documents/b95/nxpt
 BUILD_DIR="$BUILDPATH/build"
 FACTORY=$HOME/Documents/piplines/factoryabi
 CONTRACTS_LOCAL="$BUILDPATH/deploy_results"
