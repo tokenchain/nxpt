@@ -99,6 +99,6 @@ def resultcl(f, r):
 
 
 # RSC mainnet
-deployFunc(1023)
+# deployFunc(1023)
 
 setupRouterFactory()

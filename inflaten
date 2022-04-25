@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+# contract-with-imports.sol 0.4.20 --output contract-flat.sol
+#cd ./vault/vrflotterypc
+# solidity_flattener --output SimpleGen-flat.sol SimpleGen.sol
+#solflatliner --o SimpleGen-flat.sol SimpleGen.sol 0.6.12
+solflatliner --o ConnextPriceOracle.sol vault/ConnextPriceOracle.sol 0.8.6
+solflatliner --o Multicall.sol vault/Multicall.sol 0.8.6
+solflatliner --o PriceOracle.sol vault/PriceOracle.sol 0.8.6
+solflatliner --o ProposedOwnable.sol vault/ProposedOwnable.sol 0.8.6
+solflatliner --o Router.sol vault/Router.sol 0.8.6
+solflatliner --o RouterFactory.sol vault/RouterFactory.sol 0.8.6
+solflatliner --o TransactionManager.sol vault/TransactionManager.sol 0.8.6
+solflatliner --o Counter.sol vault/test/Counter.sol 0.8.6
