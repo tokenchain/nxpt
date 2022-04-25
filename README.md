@@ -1,4 +1,4 @@
-# NXPT extensions
+# NXTP extensions
 
 The python implementation for the contract deployments
 
