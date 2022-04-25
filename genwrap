@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+. ./h
+mactools
+backup_deploy

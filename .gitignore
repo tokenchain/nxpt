@@ -1,0 +1,29 @@
+/build
+logs
+*.log
+npm-debug.log*
+node_modules/
+package-lock.json
+.idea
+.env
+czJxARI*
+nohup\.out
+czxBioArb*
+build-*/**
+\.DS_Store
+
+# Binaries for programs and plugins
+*.exe
+*.dll
+*.so
+*.dylib
+factoryabi/
+# Test binary, build with `go test -c`
+*.test
+
+# Output of the go coverage tool, specifically when used with LiteIDE
+*.out
+
+# Project-local glide cache, RE: https://github.com/Masterminds/glide/issues/736
+.glide/
+key.py

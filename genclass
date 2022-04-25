@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+. ./h
+mactools
+#LOCAL MACHINE ONLY
+#PRESENT REMOTE SETTINGS
+LOCAL=182.160.11.33
+TARGET_LOC=/root/contracts
+#LOCAL PATHS
+
+mkdir -p $CONTRACTS_LOCAL
+mkdir -p "$BUILDPATH/codec/gen_py"
+mkdir -p "$BUILDPATH/codec/gen_go"
+mkdir -p "$BUILDPATH/codec/gen_ts"
+
+rsync -avzP --delete $BUILDPATH/vault root@$LOCAL:$TARGET_LOC
+####
+python3 gen_class.py
+endline
+#backup_deploy
+#bash flatliner.sh

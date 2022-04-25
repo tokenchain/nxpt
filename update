@@ -1,0 +1,13 @@
+#!/bin/sh
+. ./h
+#tsc -b
+# GIT_LOC=https://gitlab.com/b95token/fd36forsage
+VERSION=$(cat version)
+increment_version $VERSION > version
+VERSION=$(cat version)
+
+#backup_deploy
+#exit;
+
+gitpush
+
