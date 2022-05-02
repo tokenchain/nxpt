@@ -5,7 +5,7 @@ from moody.libeb import MiliDoS
 from moody import Evm
 from key import NETWORK, ROOT
 
-SOLV = "0.8.6"
+# SOLV = "0.8.6"
 
 CONTRACT_LIST = [
     "vault/ConnextPriceOracle.sol",
@@ -20,10 +20,18 @@ CONTRACT_LIST = [
     "vault/test/FeeERC20.sol",
 ]
 
+SOLV = "0.8.12"
+
+C811 = [
+    "vault/connext/Connext.sol",
+    "vault/nomad/BridgeRouter.sol",
+    "vault/nomad/TokenRegistry.sol"
+]
+
 r = MiliDoS(NETWORK)
 print("-----> this is now started")
 print(ROOT)
 print("-----> now it is root")
-r.setWorkspace(ROOT).setEvm(Evm.ISTANBUL).setClassSolNames(CONTRACT_LIST).setOptimizationRuns(10000).remoteCompile(SOLV).localTranspile("app")
+r.setClassSolNames(C811).setWorkspace(ROOT).setEvm(Evm.LONDON).setOptimizationRuns(10000).remoteCompile(SOLV).localTranspile("app")
 # r.setWorkspace(ROOT).setClassSolNames(CONTRACT_LIST).localTranspile()
 # os.system("sh localpile")

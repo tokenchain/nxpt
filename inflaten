@@ -11,3 +11,6 @@ solflatliner --o Router.sol vault/Router.sol 0.8.6
 solflatliner --o RouterFactory.sol vault/RouterFactory.sol 0.8.6
 solflatliner --o TransactionManager.sol vault/TransactionManager.sol 0.8.6
 solflatliner --o Counter.sol vault/test/Counter.sol 0.8.6
+solflatliner --o Connext.sol vault/connext/Connext.sol 0.8.12
+solflatliner --o BridgeRouter.sol vault/nomad/BridgeRouter.sol 0.8.12
+solflatliner --o TokenRegistry.sol vault/nomad/TokenRegistry.sol 0.8.12

@@ -87,10 +87,12 @@ def setupRouterFactory():
     routerfactory = j.getAddr("RouterFactory")
     txmanager = j.getAddr("TransactionManager")
     routerf = RouterFactory(j, routerfactory)
-    routerf.onSuccssCallback(resultcl)
+    routerf.CallAutoConf(j)
+    # routerf.onSuccssCallback(resultcl)
     routerf.init(txmanager)
 
     priceoracle = ConnextPriceOracle(j, j.getAddr("ConnextPriceOracle"))
+    priceoracle.CallAutoConf(j)
     priceoracle.set_v1_price_oracle(j.getAddr("ConnextPriceOracle"))
 
 
@@ -98,7 +100,25 @@ def resultcl(f, r):
     print(f"🛤  It is not ok {f}, {r}")
 
 
+def deployConnext():
+    if j.hasContractName("TokenRegistry") is False:
+        router_factory_deployer = pub
+        j.deploy("TokenRegistry", [])
+
+    if j.hasContractName("BridgeRouter") is False:
+        router_factory_deployer = pub
+        j.deploy("BridgeRouter", [])
+
+    if j.hasContractName("Connext") is False:
+        router_factory_deployer = pub
+        registry = j.getAddr("TokenRegistry")
+        router = j.getAddr("BridgeRouter")
+        domain = 102300
+        wrapper_rsc = ""
+        j.deploy("Connext", [domain, registry, router, wrapper_rsc])
+
+
 # RSC mainnet
 # deployFunc(1023)
-
-setupRouterFactory()
+# setupRouterFactory()
+deployConnext()

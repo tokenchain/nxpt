@@ -178,7 +178,7 @@ endline() {
   rm localpile
   rm -rf $BUILDPATH/factoryabi
   echo "==> 🛃 local transpile process completed."
-  bash flatliner.sh
+  bash inflaten
 }
 
 deploy_py_backend() {

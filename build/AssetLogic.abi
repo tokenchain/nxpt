@@ -1,0 +1,1 @@
+[{"inputs":[],"name":"AssetLogic__transferAssetFromContract_notNative","type":"error"},{"inputs":[],"name":"AssetLogic__transferAssetToContract_ethWithErcTransfer","type":"error"},{"inputs":[],"name":"AssetLogic__transferAssetToContract_notAmount","type":"error"}]
